@@ -1,5 +1,5 @@
-import birds from "@/data/birds.json"
-import { calculateScore } from "@/lib/scoring"
+import birds from "../../../data/birds.json"
+import { calculateScore } from "../../../lib/scoring"
 
 let sightings: any[] = []
 
