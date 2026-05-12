@@ -1,12 +1,10 @@
-export default function MySquadPage() {
+export default function MySquad() {
   return (
-    <main className="p-10">
-      <h1 className="text-4xl font-bold">
-        My Squad
-      </h1>
+    <main style={{ padding: 40 }}>
+      <h1>My Squad</h1>
 
-      <p className="mt-4">
-        Squad builder coming soon.
+      <p>
+        Select 11 birds and choose a captain.
       </p>
     </main>
   )
