@@ -1,6 +1,6 @@
 export const metadata = {
   title: "Fantasy Birding",
-  description: "Fantasy football, but for bird watching"
+  description: "Fantasy football but for bird watching"
 }
 
 export default function RootLayout({
