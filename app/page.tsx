@@ -1,30 +1,29 @@
+import birds from "../data/birds.json"
+
 export default function Home() {
   return (
-    <main className="p-10">
-      <h1 className="text-5xl font-bold mb-6">
-        Fantasy Birding
-      </h1>
+    <main style={{ padding: 40 }}>
+      <h1>🦅 Fantasy Birding</h1>
 
-      <p className="text-xl mb-8">
-        Pick your squad of 11 birds and score points
-        by spotting them in real life.
+      <p>
+        Pick 11 birds. Choose a captain. Score points when you spot them.
       </p>
 
-      <div className="space-y-4">
-        <a
-          href="/leaderboard"
-          className="block bg-black text-white p-4 rounded"
-        >
-          View Leaderboard
-        </a>
+      <h2>Your Bird Pool</h2>
 
-        <a
-          href="/my-squad"
-          className="block bg-green-700 text-white p-4 rounded"
-        >
-          Build My Squad
-        </a>
-      </div>
+      <ul>
+        {birds.map((b: any) => (
+          <li key={b.id}>
+            {b.name} — {b.points} pts
+          </li>
+        ))}
+      </ul>
+
+      <hr />
+
+      <p>
+        MVP Mode: Squad building + scoring coming next deployment.
+      </p>
     </main>
   )
 }
