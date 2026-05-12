@@ -1,37 +1,19 @@
 export default function Leaderboard() {
-  const mockUsers = [
-    {
-      name: "Alice",
-      points: 420
-    },
-    {
-      name: "Ben",
-      points: 315
-    }
+  const mock = [
+    { name: "Sam", points: 120 },
+    { name: "Alex", points: 95 },
+    { name: "Jamie", points: 70 }
   ]
 
   return (
-    <main className="p-10">
-      <h1 className="text-4xl font-bold mb-6">
-        Leaderboard
-      </h1>
+    <main style={{ padding: 40 }}>
+      <h1>Leaderboard</h1>
 
-      <div className="space-y-4">
-        {mockUsers.map((user, i) => (
-          <div
-            key={i}
-            className="border p-4 rounded"
-          >
-            <div className="font-bold">
-              {user.name}
-            </div>
-
-            <div>
-              {user.points} pts
-            </div>
-          </div>
-        ))}
-      </div>
+      {mock.map((u, i) => (
+        <div key={i} style={{ marginBottom: 10 }}>
+          {u.name} — {u.points} pts
+        </div>
+      ))}
     </main>
   )
 }
